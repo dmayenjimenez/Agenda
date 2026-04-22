@@ -20,7 +20,18 @@ dominar el lenguaje de marcado *Markdown*.
 ## Descripción General
 Esta aplicación permite realizar operaciones **CRUD** (Crear, Leer, Actualizar y Borrar) sobre una base de
 datos de usuarios. Es fundamental seguir las normas de seguridad establecidas[^1].
-
 > "La documentación es tan importante como el código mismo."
-> — Anónimo del desarrollo.
+> _Anónimo del desarrollo_.
 
+## Guía de Instalación
+Para configurar el entorno, sigue estos pasos:
+1. **Clonar el repositorio**: git clone https://github.com/usuario/proyecto.git
+2. **Crear el entorno virtual**:
+   - Windows: python -m venv venv
+   - Linux/macOS: python3 -m venv venv
+
+## Estructura de la Base de Datos
+La tabla principal de nuestra aplicación tiene el siguiente formato:
+|Campo|Tipo|Descripción|
+|---|---|---|
+|`id`|Integer|Clave primaria autoincremental|
