@@ -17,3 +17,10 @@ dominar el lenguaje de marcado *Markdown*.
 * Lógica del Sistema
 * Ejemplos de codigo
 
+## Descripción General
+Esta aplicación permite realizar operaciones **CRUD** (Crear, Leer, Actualizar y Borrar) sobre una base de
+datos de usuarios. Es fundamental seguir las normas de seguridad establecidas[^1].
+
+> "La documentación es tan importante como el código mismo."
+> — Anónimo del desarrollo.
+
