@@ -11,17 +11,18 @@ Bienvenidos al manual de la aplicación **UserAdmin**. Este documento sirve como
 dominar el lenguaje de marcado *Markdown*.
 
 ## 📋 Índice
-* Descripcion General
-* Guia de Instalacion
-* Estructura de la Base de Datos
-* Lógica del Sistema
-* Ejemplos de codigo
+1. Descripcion General
+2. Guia de Instalacion
+3. Estructura de la Base de Datos
+4. Lógica del Sistema
+5. Ejemplos de codigo
 
 ## Descripción General
 Esta aplicación permite realizar operaciones **CRUD** (Crear, Leer, Actualizar y Borrar) sobre una base de
 datos de usuarios. Es fundamental seguir las normas de seguridad establecidas[^1].
 > "La documentación es tan importante como el código mismo."
-> _Anónimo del desarrollo_.
+> 
+> — _Anónimo del desarrollo_.
 
 ## Guía de Instalación
 Para configurar el entorno, sigue estos pasos:
@@ -35,3 +36,16 @@ La tabla principal de nuestra aplicación tiene el siguiente formato:
 |Campo|Tipo|Descripción|
 |---|---|---|
 |`id`|Integer|Clave primaria autoincremental|
+|`username`|String|Nombre de usuario (único)|
+|`email`|String|Correo eléctronico validado|
+|`status`|Boolean|Estado de activación|
+
+## Lógica del Sistema
+
+El proceso de registro de un nuevo usuario sigue el flujo mostrado en este diagrama:
+
+```mermaid
+graph TD
+    A[Formulario Registro] --> B{Validar Datos}
+    B -- OK --> C[Cifrar Password] --> E[Guardar en DB] --> F[Enviar Email Confirmacion]
+    B -- Error --> D[Mostrar Alerta]
